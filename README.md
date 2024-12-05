@@ -1,7 +1,7 @@
 # RIM-Instrument
 This repository contains the Python files required to run DPM Solution's RIM (Rotational Inertia Measuring) Instrument. This instrument is designed to track electrolyte motions in Li-ion cells over charge and discharge cycles.
 
-**User instructions:**
+**Instrument User Instructions:**
 - Download the "RIM-instrument-main.zip" folder
 - Extract the files to your desktop or location of your choice
 - Open Visual Studio Code
@@ -11,3 +11,11 @@ This repository contains the Python files required to run DPM Solution's RIM (Ro
 - Click "Run All" near the top of the screen; when prompted,select "Python Environment" then "base (~\anaconda3\python.exe)"
 
 Note: The program will interrupt itself because the COM port is not connected; this is normal.
+
+**User Instructions for Data Processing**
+- Uncomment the "Import Cell" section of the code -- and ensure that "Sweep Cell" and "Loop Cell" sections are commented
+- Paste the filepath of the raw RIM data into IMPORT_FILE_PATH = r""
+- Paste the same filepath + \export into OUTPUT_FOLDER = r""
+- Click "Run All"
+- Put the Neware cycler data file in the same folder
+- Use "Jiggler_Neware_Parser time.ipynb" to output the final processed data
